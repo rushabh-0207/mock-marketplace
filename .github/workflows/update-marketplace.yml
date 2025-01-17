@@ -18,9 +18,6 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install dependencies
-        run: npm install fs-extra
-
       - name: Update marketplace.json
         run: node .github/scripts/update-marketplace.js
 
