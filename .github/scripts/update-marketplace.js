@@ -15,7 +15,7 @@ const path = require('path');
       const folderPath = path.join(rootDir, folder);
       const configPath = path.join(folderPath, 'config.json');
       const iconFile = path.join(folderPath, 'icon');
-      const scriptFile = path.join(folderPath, 'script');
+      const scriptFile = path.join(folderPath, 'script.sh');
 
       if (fs.existsSync(configPath) && fs.existsSync(scriptFile)) {
         const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
@@ -28,7 +28,7 @@ const path = require('path');
             status: config.status,
             blogLink: config.blogLink,
             gpu: config.gpu,
-            script: `${repoUrl}/${folder}/script`,
+            script: `${repoUrl}/${folder}/script.sh`,
             icon: fs.existsSync(iconFile) ? `data:image/png;base64,${fs.readFileSync(iconFile, 'base64')}` : null,
           };
         }
