@@ -18,8 +18,8 @@ Each marketplace folder must contain the following items:
     "blogLink": "blog_link",
     "gpu": {
         "dockerImageName": "doker_image",
-        "dockerRubOptions": "doker_run_options",
-        "requiredDiskSpace": "disk_size_in_gb"
+        "dockerRunOptions": "doker_run_options",
+        "requiredDiskSpaceInGb": "disk_size_in_gb"
     }
   }
   ```

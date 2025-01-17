@@ -32,8 +32,12 @@ const path = require('path');
             title: config.title,
             description: config.description,
             blogLink: config.blogLink,
-            gpu: config.gpu,
-            script: `${repoUrl}/${folder}/script.sh`,
+            gpuConfig: {
+              dockerImageName: config.gpuConfig.dockerImageName,
+              dockerRunOptions: config.gpuConfig.dockerRunOptions,
+              requiredDiskSpaceInGb: config.gpuConfig.requiredDiskSpaceInGb
+            },
+            script: encodeURI(`${repoUrl}/${folder}/script.sh`),
             icon: fs.existsSync(iconFile) ? `data:image/png;base64,${fs.readFileSync(iconFile, 'base64')}` : null,
           };
         }

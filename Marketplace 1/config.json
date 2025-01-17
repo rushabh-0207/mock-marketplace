@@ -4,9 +4,9 @@
     "discription": "Dummy marketplace item",
     "status": "publish",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
-    "gpu": {
+    "gpuConfig": {
         "dockerImageName": "rushabh0207/custom-app:01",
-        "dockerOptions": "-p 3000:3000",
-        "requiredDiskSpace": "24"
+        "dockerRunOptions": "-p 3000:3000",
+        "requiredDiskSpaceInGb": "24"
     }
 }
