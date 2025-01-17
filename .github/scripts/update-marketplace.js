@@ -37,6 +37,6 @@ const path = require('path');
     })
     .filter(Boolean);
 
-  await fs.writeJSON(marketplaceJsonPath, updatedData, { spaces: 2 });
+  fs.writeFileSync(marketplaceJsonPath, JSON.stringify(updatedData, null, 2));
   console.log('marketplace.json updated successfully');
 })();
