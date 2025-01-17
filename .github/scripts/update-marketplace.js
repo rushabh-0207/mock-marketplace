@@ -4,7 +4,7 @@ const path = require('path');
 (async () => {
   const rootDir = './';
   const marketplaceJsonPath = path.join(rootDir, 'marketplace.json');
-  const repoUrl = 'https://raw.githubusercontent.com/rushabh-0207/test-script/main';
+  const repoUrl = 'https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main';
 
   const folders = fs.readdirSync(rootDir, { withFileTypes: true })
     .filter(dirent => dirent.isDirectory())
