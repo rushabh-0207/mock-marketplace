@@ -11,5 +11,18 @@
     },
     "script": "https://raw.githubusercontent.com/rushabh-0207/test-script/main/Marketplace 1/script.sh",
     "icon": null
+  },
+  {
+    "id": 2,
+    "title": "Marketplace 2",
+    "status": "publish",
+    "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
+    "gpu": {
+      "dockerImageName": "rushabh0207/custom-app:01",
+      "dockerOptions": "-p 3000:3000",
+      "requiredDiskSpace": "24"
+    },
+    "script": "https://raw.githubusercontent.com/rushabh-0207/test-script/main/Marketplace 2/script.sh",
+    "icon": null
   }
 ]
