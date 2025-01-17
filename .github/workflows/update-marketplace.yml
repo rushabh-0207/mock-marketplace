@@ -1,0 +1,76 @@
+name: Update Marketplace JSON
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-marketplace-json:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Update marketplace.json
+      run: |
+        node <<EOF
+        const fs = require('fs');
+        const path = require('path');
+
+        const rootDir = './'; // Root directory of the repository
+        const marketplaceJsonPath = path.join(rootDir, 'marketplace.json');
+        const repoUrl = 'https://raw.githubusercontent.com/rushabh-0207/test-script/main';
+
+        const folders = fs.readdirSync(rootDir, { withFileTypes: true })
+          .filter(dirent => dirent.isDirectory())
+          .map(dirent => dirent.name);
+
+        const updatedData = folders
+          .map(folder => {
+            const folderPath = path.join(rootDir, folder);
+            const configPath = path.join(folderPath, 'config.json');
+            const iconFile = path.join(folderPath, 'icon');
+            const scriptFile = path.join(folderPath, 'script');
+
+            if (fs.existsSync(configPath) && fs.existsSync(scriptFile)) {
+              const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+
+              // Ensure the marketplace meets the filtering criteria
+              if (config.status === 'publish') {
+                return {
+                  id: config.id,
+                  title: config.title,
+                  description: config.description,
+                  status: config.status,
+                  blogLink: config.blogLink,
+                  gpu: config.gpu,
+                  script: `${repoUrl}/${folder}/script`,
+                  icon: fs.existsSync(iconFile) ? `data:image/png;base64,${fs.readFileSync(iconFile, 'base64')}` : null,
+                };
+              }
+            }
+            return null;
+          })
+          .filter(Boolean); // Remove null values from the array
+
+        fs.writeFileSync(marketplaceJsonPath, JSON.stringify(updatedData, null, 2));
+        console.log('marketplace.json updated successfully');
+        EOF
+
+    - name: Commit and push changes
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add marketplace.json
+        git commit -m "Update marketplace.json on PR merge"
+        git push
