@@ -6,8 +6,8 @@
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
     "type": "cpu",
     "cpuConfig": {
-        "dockerImageName": "rushabh0207/custom-app:01",
-        "dockerRunOptions": "-p 3000:3000",
-        "requiredDiskSpaceInGb": 24
+        "cpu": "rushabh0207/custom-app:01",
+        "ramInGb": "-p 3000:3000",
+        "storageInGb": 24
     }
 }
