@@ -26,17 +26,23 @@ const path = require('path');
         }
         ids.add(config.id);
 
-        if (config.status === 'publish') {
+        if (config.status === 'publish' && ((config.type === "cpu" && !!config.cpuConfig) || (config.type === "gpu" && !!config.gpuConfig))) {
           return {
             id: config.id,
             title: config.title,
             description: config.description,
             blogLink: config.blogLink,
-            gpuConfig: {
+            type: config.type,
+            cpuConfig: config.type === "cpu" ? {
+              cpu: config.cpuConfig.cpu,
+              ramInGb: config.cpuConfig.ramInGb,
+              storageInGb: config.cpuConfig.storageInGb
+            }: null,
+            gpuConfig: config.type === "gpu" ? {
               dockerImageName: config.gpuConfig.dockerImageName,
               dockerRunOptions: config.gpuConfig.dockerRunOptions,
               requiredDiskSpaceInGb: config.gpuConfig.requiredDiskSpaceInGb
-            },
+            }: null,
             script: encodeURI(`${repoUrl}/${folder}/script.sh`),
             iconBase64: fs.existsSync(iconFile) ? `data:image/png;base64,${fs.readFileSync(iconFile, 'base64')}` : null,
           };

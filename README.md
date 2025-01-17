@@ -16,10 +16,15 @@ Each marketplace folder must contain the following items:
     "description": "marketpalce_discription",
     "status": "publish/draft",
     "blogLink": "blog_link",
-    "gpu": {
-        "dockerImageName": "doker_image",
-        "dockerRunOptions": "doker_run_options",
-        "requiredDiskSpaceInGb": "disk_size_in_gb"
+    "cpuConfig": {
+      "cpu": "cpu",
+      "ramInGb": "cpu_ram_in_gb",
+      "storageInGb": "storage_ram_in_gb"
+    },
+    "gpuConfig": {
+      "dockerImageName": "doker_image",
+      "dockerRunOptions": "doker_run_options",
+      "requiredDiskSpaceInGb": "disk_size_in_gb"
     }
   }
   ```
