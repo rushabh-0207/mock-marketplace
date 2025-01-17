@@ -31,7 +31,6 @@ const path = require('path');
             id: config.id,
             title: config.title,
             description: config.description,
-            status: config.status,
             blogLink: config.blogLink,
             gpu: config.gpu,
             script: `${repoUrl}/${folder}/script.sh`,
