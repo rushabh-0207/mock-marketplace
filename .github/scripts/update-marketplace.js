@@ -15,7 +15,7 @@ const path = require('path');
     .map(folder => {
       const folderPath = path.join(rootDir, folder);
       const configPath = path.join(folderPath, 'config.json');
-      const iconFile = path.join(folderPath, 'icon');
+      const iconFile = path.join(folderPath, 'icon.svg');
       const scriptFile = path.join(folderPath, 'script.sh');
 
       if (fs.existsSync(configPath) && fs.existsSync(scriptFile)) {
