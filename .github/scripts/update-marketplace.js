@@ -10,6 +10,7 @@ const path = require('path');
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name);
 
+  const ids = new Set(); // To track unique IDs
   const updatedData = folders
     .map(folder => {
       const folderPath = path.join(rootDir, folder);
@@ -19,6 +20,11 @@ const path = require('path');
 
       if (fs.existsSync(configPath) && fs.existsSync(scriptFile)) {
         const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+
+        if (ids.has(config.id)) {
+          throw new Error(`Duplicate ID found: ${config.id} in folder: ${folder}`);
+        }
+        ids.add(config.id);
 
         if (config.status === 'publish') {
           return {

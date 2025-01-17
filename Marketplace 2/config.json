@@ -1,0 +1,12 @@
+{
+    "id": 1,
+    "title": "Marketplace 2",
+    "discription": "Dummy marketplace item",
+    "status": "publish",
+    "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
+    "gpu": {
+        "dockerImageName": "rushabh0207/custom-app:01",
+        "dockerOptions": "-p 3000:3000",
+        "requiredDiskSpace": "24"
+    }
+}
