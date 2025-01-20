@@ -13,7 +13,7 @@ Each marketplace folder must contain the following items:
   {
     "id": 1,
     "title": "marketpalce_title",
-    "description": "marketpalce_discription",
+    "description": "marketpalce_description",
     "status": "publish/draft",
     "blogLink": "blog_link",
     "prerequisites": "prerequisites",

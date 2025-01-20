@@ -1,7 +1,7 @@
 {
     "id": 2,
     "title": "Marketplace 2",
-    "discription": "Dummy marketplace item",
+    "description": "Dummy marketplace item",
     "status": "publish",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
     "type": "gpu",
