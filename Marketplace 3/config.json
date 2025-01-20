@@ -5,6 +5,7 @@
     "status": "publish",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
     "type": "cpu",
+    "prerequisites": "1 CPU 1 GB RAM 25 GB HDD",
     "cpuConfig": {
         "cpu": 1,
         "ramInGb": 4,

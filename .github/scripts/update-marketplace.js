@@ -33,6 +33,7 @@ const path = require('path');
             description: config.description,
             blogLink: config.blogLink,
             type: config.type,
+            prerequisites: config.prerequisites,
             cpuConfig: config.type === "cpu" ? {
               cpu: config.cpuConfig.cpu,
               ramInGb: config.cpuConfig.ramInGb,

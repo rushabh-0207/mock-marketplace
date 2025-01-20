@@ -16,6 +16,7 @@ Each marketplace folder must contain the following items:
     "description": "marketpalce_discription",
     "status": "publish/draft",
     "blogLink": "blog_link",
+    "prerequisites": "prerequisites",
     "cpuConfig": {
       "cpu": "cpu",
       "ramInGb": "cpu_ram_in_gb",
@@ -34,6 +35,7 @@ Each marketplace folder must contain the following items:
   - `description`: A brief description of the marketplace.
   - `status`: Indicates whether the marketplace is published or in draft mode.
   - `blogLink`: URL to the related blog post.
+  -  `prerequisites`: Required resource specification.
   - `gpu` (Object):
     - `dockerImageName`: Name of the Docker image to use.
     - `dockerOptions`: Options for launching the Docker container (e.g., exposed ports, arguments).
