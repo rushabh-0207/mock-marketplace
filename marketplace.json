@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Marketplace 1",
+    "description": "Dummy marketplace item",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
     "type": "gpu",
     "prerequisites": "1 CPU 1 GB RAM 25 GB HDD",
@@ -17,6 +18,7 @@
   {
     "id": 2,
     "title": "Marketplace 2",
+    "description": "Dummy marketplace item",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
     "type": "gpu",
     "prerequisites": "1 CPU 1 GB RAM 25 GB HDD",
@@ -32,6 +34,7 @@
   {
     "id": 3,
     "title": "Marketplace 3",
+    "description": "Dummy marketplace item",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
     "type": "cpu",
     "prerequisites": "1 CPU 1 GB RAM 25 GB HDD",
