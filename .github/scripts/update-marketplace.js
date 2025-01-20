@@ -45,7 +45,7 @@ const path = require('path');
               requiredDiskSpaceInGb: config.gpuConfig.requiredDiskSpaceInGb
             }: null,
             script: encodeURI(`${repoUrl}/${folder}/script.sh`),
-            iconBase64: fs.existsSync(iconFile) ? `data:image/png;base64,${fs.readFileSync(iconFile, 'base64')}` : null,
+            iconBase64: fs.existsSync(iconFile) ? `data:image/svg+xml;base64,${fs.readFileSync(iconFile, 'base64')}` : null,
           };
         }
       }
