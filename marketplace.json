@@ -4,6 +4,7 @@
     "title": "Marketplace 1",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
     "type": "gpu",
+    "prerequisites": "1 CPU 1 GB RAM 25 GB HDD",
     "cpuConfig": null,
     "gpuConfig": {
       "dockerImageName": "rushabh0207/custom-app:01",
@@ -18,6 +19,7 @@
     "title": "Marketplace 2",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
     "type": "gpu",
+    "prerequisites": "1 CPU 1 GB RAM 25 GB HDD",
     "cpuConfig": null,
     "gpuConfig": {
       "dockerImageName": "rushabh0207/custom-app:01",
@@ -32,6 +34,7 @@
     "title": "Marketplace 3",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
     "type": "cpu",
+    "prerequisites": "1 CPU 1 GB RAM 25 GB HDD",
     "cpuConfig": {
       "cpu": 1,
       "ramInGb": 4,
