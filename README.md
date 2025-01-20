@@ -41,11 +41,15 @@ Each marketplace folder must contain the following items:
     - `dockerOptions`: Options for launching the Docker container (e.g., exposed ports, arguments).
     - `requiredDiskSpace`: Amount of disk space required (in GB).
 
-### 2. `script`
+### 2. `script.sh`
 - **Description**: This file contains either the path or the actual content of the marketplace script.
 - **Purpose**: Defines the logic or operations specific to the marketplace.
 
-### 3. `icon`
+### 3. `light-icon.svg`
+- **Description**: This file contains the path to the icon representing the marketplace.
+- **Purpose**: Used for visual identification in user interfaces.
+
+### 4. `dark-icon.svg`
 - **Description**: This file contains the path to the icon representing the marketplace.
 - **Purpose**: Used for visual identification in user interfaces.
 

@@ -15,7 +15,8 @@ const path = require('path');
     .map(folder => {
       const folderPath = path.join(rootDir, folder);
       const configPath = path.join(folderPath, 'config.json');
-      const iconFile = path.join(folderPath, 'icon.svg');
+      const lightIconFile = path.join(folderPath, 'light-icon.svg');
+      const darkIconFile = path.join(folderPath, 'dark-icon.svg');
       const scriptFile = path.join(folderPath, 'script.sh');
 
       if (fs.existsSync(configPath) && fs.existsSync(scriptFile)) {
@@ -45,7 +46,8 @@ const path = require('path');
               requiredDiskSpaceInGb: config.gpuConfig.requiredDiskSpaceInGb
             }: null,
             script: encodeURI(`${repoUrl}/${folder}/script.sh`),
-            iconBase64: fs.existsSync(iconFile) ? `data:image/svg+xml;base64,${fs.readFileSync(iconFile, 'base64')}` : null,
+            lightIconBase64: fs.existsSync(lightIconFile) ? `data:image/svg+xml;base64,${fs.readFileSync(lightIconFile, 'base64')}` : null,
+            darkIconBase64: fs.existsSync(darkIconFile) ? `data:image/svg+xml;base64,${fs.readFileSync(darkIconFile, 'base64')}` : null,
           };
         }
       }
