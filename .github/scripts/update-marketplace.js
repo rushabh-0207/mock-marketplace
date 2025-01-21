@@ -33,13 +33,13 @@ const path = require('path');
             title: config.title,
             description: config.description,
             blogLink: config.blogLink,
-            prerequisites: config.prerequisites,
-            gpuConfig: config.type === "gpu" ? {
+            minimumSpecs: config.minimumSpecs,
+            gpuConfig:{
               dockerImageName: config.gpuConfig.dockerImageName,
               dockerRunOptions: config.gpuConfig.dockerRunOptions,
               requiredDiskSpaceInGb: config.gpuConfig.requiredDiskSpaceInGb
-            }: null,
-            script: encodeURI(`${repoUrl}/${folder}/script.sh`),
+            },
+            scriptUrl: encodeURI(`${repoUrl}/${folder}/script.sh`),
             lightIconBase64: fs.existsSync(lightIconFile) ? `data:image/svg+xml;base64,${fs.readFileSync(lightIconFile, 'base64')}` : null,
             darkIconBase64: fs.existsSync(darkIconFile) ? `data:image/svg+xml;base64,${fs.readFileSync(darkIconFile, 'base64')}` : null,
           };
