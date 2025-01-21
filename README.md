@@ -17,11 +17,6 @@ Each marketplace folder must contain the following items:
     "status": "publish/draft",
     "blogLink": "blog_link",
     "prerequisites": "prerequisites",
-    "cpuConfig": {
-      "cpu": "cpu",
-      "ramInGb": "cpu_ram_in_gb",
-      "storageInGb": "storage_ram_in_gb"
-    },
     "gpuConfig": {
       "dockerImageName": "doker_image",
       "dockerRunOptions": "doker_run_options",
@@ -35,7 +30,7 @@ Each marketplace folder must contain the following items:
   - `description`: A brief description of the marketplace.
   - `status`: Indicates whether the marketplace is published or in draft mode.
   - `blogLink`: URL to the related blog post.
-  -  `prerequisites`: Required resource specification.
+  - `prerequisites`: Required resource specification.
   - `gpu` (Object):
     - `dockerImageName`: Name of the Docker image to use.
     - `dockerOptions`: Options for launching the Docker container (e.g., exposed ports, arguments).
@@ -55,7 +50,7 @@ Each marketplace folder must contain the following items:
 
 ## GitHub Pipeline
 Upon merging a pull request (PR):
-1. The GitHub pipeline automatically updates the `marketplace.json` file.
+1. The GitHub pipeline automatically updates the `gpu-marketplace.json` file.
 2. This ensures that the main configuration file remains synchronized with the individual marketplace folders.
 
 ### Notes

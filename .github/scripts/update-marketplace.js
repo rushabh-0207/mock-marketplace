@@ -3,7 +3,7 @@ const path = require('path');
 
 (async () => {
   const rootDir = './';
-  const marketplaceJsonPath = path.join(rootDir, 'marketplace.json');
+  const marketplaceJsonPath = path.join(rootDir, 'gpu-marketplace.json');
   const repoUrl = 'https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main';
 
   const folders = fs.readdirSync(rootDir, { withFileTypes: true })
@@ -27,19 +27,13 @@ const path = require('path');
         }
         ids.add(config.id);
 
-        if (config.status === 'publish' && ((config.type === "cpu" && !!config.cpuConfig) || (config.type === "gpu" && !!config.gpuConfig))) {
+        if (config.status === 'publish' && config.type === "gpu" && !!config.gpuConfig) {
           return {
             id: config.id,
             title: config.title,
             description: config.description,
             blogLink: config.blogLink,
-            type: config.type,
             prerequisites: config.prerequisites,
-            cpuConfig: config.type === "cpu" ? {
-              cpu: config.cpuConfig.cpu,
-              ramInGb: config.cpuConfig.ramInGb,
-              storageInGb: config.cpuConfig.storageInGb
-            }: null,
             gpuConfig: config.type === "gpu" ? {
               dockerImageName: config.gpuConfig.dockerImageName,
               dockerRunOptions: config.gpuConfig.dockerRunOptions,
