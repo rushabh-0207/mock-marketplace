@@ -40,8 +40,8 @@ const path = require('path');
               requiredDiskSpaceInGb: config.gpuConfig.requiredDiskSpaceInGb
             },
             scriptUrl: encodeURI(`${repoUrl}/${folder}/script.sh`),
-            lightIconBase64: fs.existsSync(lightIconFile) ? `data:image/svg+xml;base64,${fs.readFileSync(lightIconFile, 'base64')}` : null,
-            darkIconBase64: fs.existsSync(darkIconFile) ? `data:image/svg+xml;base64,${fs.readFileSync(darkIconFile, 'base64')}` : null,
+            lightIcon: fs.existsSync(lightIconFile) ? encodeURI(`${repoUrl}/${folder}/light-icon.svg`) : null,
+            darkIcon: fs.existsSync(darkIconFile) ? encodeURI(`${repoUrl}/${folder}/dark-icon.svg'`) : null,
           };
         }
       }
