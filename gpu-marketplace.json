@@ -15,8 +15,8 @@
       "requiredDiskSpaceInGb": 24
     },
     "scriptUrl": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%201/script.sh",
-    "lightIcon": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%201/light-icon.svg",
-    "darkIcon": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%201/dark-icon.svg'"
+    "lightIconUrl": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%201/light-icon.svg",
+    "darkIconUrl": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%201/dark-icon.svg'"
   },
   {
     "id": 2,
@@ -34,8 +34,8 @@
       "requiredDiskSpaceInGb": 24
     },
     "scriptUrl": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%202/script.sh",
-    "lightIcon": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%202/light-icon.svg",
-    "darkIcon": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%202/dark-icon.svg'"
+    "lightIconUrl": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%202/light-icon.svg",
+    "darkIconUrl": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%202/dark-icon.svg'"
   },
   {
     "id": 3,
@@ -53,8 +53,8 @@
       "requiredDiskSpaceInGb": 24
     },
     "scriptUrl": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%203/script.sh",
-    "lightIcon": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%203/light-icon.svg",
-    "darkIcon": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%203/dark-icon.svg'"
+    "lightIconUrl": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%203/light-icon.svg",
+    "darkIconUrl": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%203/dark-icon.svg'"
   },
   {
     "id": 4,
@@ -72,7 +72,7 @@
       "requiredDiskSpaceInGb": 24
     },
     "scriptUrl": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%204/script.sh",
-    "lightIcon": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%204/light-icon.svg",
-    "darkIcon": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%204/dark-icon.svg'"
+    "lightIconUrl": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%204/light-icon.svg",
+    "darkIconUrl": "https://raw.githubusercontent.com/rushabh-0207/mock-marketplace/main/Marketplace%204/dark-icon.svg'"
   }
 ]
