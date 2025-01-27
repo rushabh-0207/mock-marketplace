@@ -4,7 +4,11 @@
     "title": "Lorem Ipsum Dolor Sit Amet Amet Consectetur (Version 1.1.0)",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
-    "minimumSpecs": "1 CPU 1 GB RAM 25 GB HDD",
+    "minimumSpecs": {
+      "cpuCores": 2,
+      "ramGb": 4,
+      "storageGb": 20
+    },
     "gpuConfig": {
       "dockerImageName": "rushabh0207/custom-app:01",
       "dockerRunOptions": "-p 3000:3000",
@@ -19,7 +23,11 @@
     "title": "Lorem Ipsum Version 1.1.0)",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
-    "minimumSpecs": "1 CPU 1 GB RAM 25 GB HDD",
+    "minimumSpecs": {
+      "cpuCores": 2,
+      "ramGb": 4,
+      "storageGb": 20
+    },
     "gpuConfig": {
       "dockerImageName": "rushabh0207/custom-app:01",
       "dockerRunOptions": "-p 3000:3000",
@@ -34,7 +42,11 @@
     "title": "Lorem Ipsum Dolor Sit Amet Amet Consectetur (Version 1.1.0)",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
-    "minimumSpecs": "1 CPU 1 GB RAM 25 GB HDD",
+    "minimumSpecs": {
+      "cpuCores": 2,
+      "ramGb": 4,
+      "storageGb": 20
+    },
     "gpuConfig": {
       "dockerImageName": "rushabh0207/custom-app:01",
       "dockerRunOptions": "-p 3000:3000",
@@ -49,7 +61,11 @@
     "title": "Lorem Ipsum Dolor Sit Amet Amet Consectetur (Version 1.1.0)",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
     "blogLink": "https://nodeshift.com/blog/install-portainer-on-ubuntu-simplify-container-management-with-web-ui",
-    "minimumSpecs": "1 CPU 1 GB RAM 25 GB HDD",
+    "minimumSpecs": {
+      "cpuCores": 2,
+      "ramGb": 4,
+      "storageGb": 20
+    },
     "gpuConfig": {
       "dockerImageName": "rushabh0207/custom-app:01",
       "dockerRunOptions": "-p 3000:3000",
